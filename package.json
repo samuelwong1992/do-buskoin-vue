@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "start": "node sammy.js; serve -s _static -l tcp://0.0.0.0:${PORT:-8080} -n",
-    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --dest _static",
     "lint": "vue-cli-service lint"
   },
@@ -18,7 +17,8 @@
     "vue-qrcode-reader": "^3.0.0",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0",
-    "vuex-persistedstate": "^4.0.0-beta.3"
+    "vuex-persistedstate": "^4.0.0-beta.3",
+    "serve": "^11.3.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
