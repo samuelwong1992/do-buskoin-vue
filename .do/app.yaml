@@ -1,9 +1,16 @@
-name: sample-vuejs
+name: buskoin-vue
+region: sgp
 services:
 - build_command: yarn build
   environment_slug: node-js
   github:
     branch: main
     deploy_on_push: true
-    repo: digitalocean/sample-vuejs
-  name: sample-vuejs
+    repo: samuelwong1992/do-buskoin-vue
+  http_port: 8080
+  instance_count: 1
+  instance_size_slug: basic-xs
+  name: buskoin-vue
+  routes:
+  - path: /do-buskoin-vue
+  run_command: yarn start
