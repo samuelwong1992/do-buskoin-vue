@@ -14,13 +14,13 @@
         <div class="social-links">
           <div v-if="facebook_url || editing" class="social-link">
             <a target="_blank" :href="facebook_url" v-if="!editing">
-              <img src="@/assets/images/facebook_logo.png" alt="" srcset="" />
+              <img src="/assets/images/facebook_logo.png" alt="" srcset="" />
               <p>{{ facebook_url }}</p>
             </a>
 
             <img
               v-if="editing"
-              src="@/assets/images/facebook_logo.png"
+              src="/assets/images/facebook_logo.png"
               alt=""
               srcset=""
             />
@@ -29,13 +29,13 @@
 
           <div v-if="insta_url || editing" class="social-link">
             <a target="_blank" :href="insta_url" v-if="!editing">
-              <img src="@/assets/images/insta_logo.png" alt="" srcset="" />
+              <img src="/assets/images/insta_logo.png" alt="" srcset="" />
               <p>{{ insta_url }}</p>
             </a>
 
             <img
               v-if="editing"
-              src="@/assets/images/insta_logo.png"
+              src="/assets/images/insta_logo.png"
               alt=""
               srcset=""
             />
@@ -44,13 +44,13 @@
 
           <div v-if="youtube_url || editing" class="social-link">
             <a target="_blank" :href="youtube_url" v-if="!editing">
-              <img src="@/assets/images/youtube_logo.png" alt="" srcset="" />
+              <img src="/assets/images/youtube_logo.png" alt="" srcset="" />
               <p>{{ youtube_url }}</p>
             </a>
 
             <img
               v-if="editing"
-              src="@/assets/images/youtube_logo.png"
+              src="/assets/images/youtube_logo.png"
               alt=""
               srcset=""
             />
@@ -59,13 +59,13 @@
 
           <div v-if="twitter_url || editing" class="social-link">
             <a target="_blank" :href="twitter_url" v-if="!editing">
-              <img src="@/assets/images/twitter_logo.png" alt="" srcset="" />
+              <img src="/assets/images/twitter_logo.png" alt="" srcset="" />
               <p>{{ twitter_url }}</p>
             </a>
 
             <img
               v-if="editing"
-              src="@/assets/images/twitter_logo.png"
+              src="/assets/images/twitter_logo.png"
               alt=""
               srcset=""
             />
@@ -74,13 +74,13 @@
 
           <div v-if="snapchat_url || editing" class="social-link">
             <a target="_blank" :href="snapchat_url" v-if="!editing">
-              <img src="@/assets/images/snapchat_logo.png" alt="" srcset="" />
+              <img src="/assets/images/snapchat_logo.png" alt="" srcset="" />
               <p>{{ snapchat_url }}</p>
             </a>
 
             <img
               v-if="editing"
-              src="@/assets/images/snapchat_logo.png"
+              src="/assets/images/snapchat_logo.png"
               alt=""
               srcset=""
             />
