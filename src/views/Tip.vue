@@ -1,8 +1,6 @@
 <template>
   <div class="tip">
     <div class="scanner-container">
-      <p v-on:click="onClickLabel">tipa</p>
-      {{ qr_code }}
       <QrcodeStream @decode="onDecode"></QrcodeStream>
     </div>
   </div>

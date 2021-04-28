@@ -20,6 +20,11 @@ const routes = [
     component: Home,
   },
   {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
     path: "/tip",
     name: "Tip",
     component: Tip,
