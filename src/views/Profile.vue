@@ -8,9 +8,17 @@
             v-if="!uuid"
             v-on:click="goToGenerate"
             class="primary-button"
-            style="width: 100%; margin-bottom: 24px"
+            style="width: 100%; margin-bottom: 8px"
           >
             Generate QR Code
+          </button>
+          <button
+            v-if="!uuid"
+            v-on:click="goToStripe"
+            class="primary-button"
+            style="width: 100%; margin-bottom: 24px"
+          >
+            Go To Stripe
           </button>
         <div class="social-links">
           <div v-if="facebook_url || editing" class="social-link">
@@ -223,6 +231,23 @@ export default {
     },
     goToGenerate: function () {
       this.$router.push({ name: "GenerateQR" });
+    },
+    goToStripe: function () {
+      this.axios
+        .get(this.$api_hostname + "api/create_stripe_login/", {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Token " + this.$store.state.token,
+          },
+        })
+        .then((response) => {
+          if(response.data.client_secret.url) {
+              window.location = response.data.client_secret.url;
+          }
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     },
     enableEdit: function () {
       this.editing = true;
