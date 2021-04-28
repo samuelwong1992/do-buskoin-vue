@@ -155,6 +155,7 @@ export default {
     font-weight: bold;
     color: $primary;
     cursor: pointer;
+    background-color: white;
 
     &:focus {
       outline: 0;
