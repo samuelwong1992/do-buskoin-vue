@@ -6,11 +6,11 @@
       <router-link v-if="this.$store.state.token" to="/profile"
         >Profile</router-link
       >
-      <span v-if="this.$store.state.token">|</span>
+      <span v-if="this.$store.state.token"> | </span>
       <router-link v-if="!this.$store.state.token" to="/sign-up"
         >Sign Up</router-link
       >
-      <span v-if="!this.$store.state.token">| </span>
+      <span v-if="!this.$store.state.token"> | </span>
       <router-link v-if="!this.$store.state.token" to="/login"
         >Login</router-link
       >

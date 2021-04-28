@@ -2,7 +2,8 @@
   <div class="profile">
     <div v-if="!notFound" class="profile-container">
       <div class="logo-container">
-        <img :src="logo" alt="" srcset="" />
+        <img :src="logo" alt="" srcset=""/>
+        <input v-if="editing" type="file" accept="image/*" v-on:change="imageChanged" />
         <button
             v-if="!uuid"
             v-on:click="goToGenerate"
@@ -94,18 +95,21 @@
           class="entertainer-name"
           :class="{ 'not-editing': !editing, editing: editing }"
           v-model="entertainer_name"
+          placeholder="Entertainer Name"
         />
         <input
           :disabled="!editing || saving"
           class="entertainer-heading"
           :class="{ 'not-editing': !editing, editing: editing }"
           v-model="headline"
+          placeholder="Headline"
         />
         <textarea
           :disabled="!editing || saving"
           class="entertainer-bio"
           :class="{ 'not-editing': !editing, editing: editing }"
           v-model="bio"
+          placeholder="Entertainer Bio"
         ></textarea>
         <button
           class="edit-button"
@@ -142,6 +146,7 @@ export default {
       twitter_url: "",
       snapchat_url: "",
       logo: "",
+      image: null,
 
       editing: false,
       saving: false,
@@ -212,6 +217,10 @@ export default {
           });
       }
     },
+    imageChanged: function(e) {
+      const file = e.target.files[0]
+      this.image = file
+    },
     goToGenerate: function () {
       this.$router.push({ name: "GenerateQR" });
     },
@@ -233,6 +242,9 @@ export default {
       formData.append("youtube_url", this.youtube_url);
       formData.append("twitter_url", this.twitter_url);
       formData.append("snapchat_url", this.snapchat_url);
+      if(this.image) {
+        formData.append('logo', this.image, this.image.name);
+      }
 
       this.saving = true;
       this.axios
@@ -296,9 +308,14 @@ export default {
 
 .logo-container {
   padding: 32px;
+  display: flex;
+  flex-direction: column;
 
   img {
     height: 160px;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 8px;
   }
 
   .social-links {
