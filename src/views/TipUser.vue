@@ -63,7 +63,7 @@ export default {
       formData.append("user", this.$route.params.id);
 
       this.axios
-        .post(this.$hostname + "api/create-payment/", formData, {
+        .post(this.$api_hostname + "api/create-payment/", formData, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -89,7 +89,7 @@ export default {
       let app = this;
       this.axios
         .get(
-          this.$hostname + "api/fetch-profile/" + this.$route.params.id + "/",
+          this.$api_hostname + "api/fetch-profile/" + this.$route.params.id + "/",
           {
             headers: {
               "Content-Type": "application/json",

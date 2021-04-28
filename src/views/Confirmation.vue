@@ -63,7 +63,7 @@ export default {
     this.$nextTick(() => {
       this.axios
         .get(
-          this.$hostname + "api/fetch-payment/" + this.$route.params.id + "/",
+          this.$api_hostname + "api/fetch-payment/" + this.$route.params.id + "/",
           {
             headers: {
               "Content-Type": "application/json",

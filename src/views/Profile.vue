@@ -163,7 +163,7 @@ export default {
       let app = this;
       if (!this.uuid) {
         this.axios
-          .get(this.$hostname + "api/profile/", {
+          .get(this.$api_hostname + "api/profile/", {
             headers: {
               "Content-Type": "application/json",
               Authorization: "Token " + this.$store.state.token,
@@ -191,7 +191,7 @@ export default {
           });
       } else {
         this.axios
-          .get(this.$hostname + "api/fetch-profile/" + this.uuid + "/", {
+          .get(this.$api_hostname + "api/fetch-profile/" + this.uuid + "/", {
             headers: {
               "Content-Type": "application/json",
             },
@@ -248,7 +248,7 @@ export default {
 
       this.saving = true;
       this.axios
-        .patch(this.$hostname + "api/profile/", formData, {
+        .patch(this.$api_hostname + "api/profile/", formData, {
           headers: {
             "Content-Type": "application/json",
             Authorization: "Token " + this.$store.state.token,

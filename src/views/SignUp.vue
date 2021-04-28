@@ -39,7 +39,7 @@ export default {
       formData.append("password", this.password);
 
       this.axios
-        .post(this.$hostname + "api/sign-up/", formData, {
+        .post(this.$api_hostname + "api/sign-up/", formData, {
           headers: {
             "Content-Type": "application/json",
           },

@@ -6,7 +6,8 @@ import axios from "axios";
 import VueAxios from "vue-axios";
 
 Vue.config.productionTip = false;
-Vue.prototype.$hostname = "https://api.buskoin.com/";
+Vue.prototype.$api_hostname = "https://api.buskoin.com/";
+Vue.prototype.$hostname = "https://www.buskoin.com/#/";
 
 new Vue({
   router,

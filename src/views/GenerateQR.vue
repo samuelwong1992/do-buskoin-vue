@@ -30,7 +30,7 @@ export default {
   methods: {
     getProfile: function () {
       this.axios
-        .get(this.$hostname + "api/profile/", {
+        .get(this.$api_hostname + "api/profile/", {
           headers: {
             "Content-Type": "application/json",
             Authorization: "Token " + this.$store.state.token,
@@ -42,7 +42,7 @@ export default {
           } else {
             if (response.data.profile != null) {
               this.entertainer_uuid =
-                this.$hostname + "api/tip-user/" + response.data.profile.uuid;
+                this.$hostname + "tip-user/" + response.data.profile.uuid;
               this.entertainer_name = response.data.profile.entertainer_name;
               this.headline = response.data.profile.headline;
               this.logo = response.data.profile.logo;
