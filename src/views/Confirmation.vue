@@ -61,6 +61,7 @@ export default {
   },
   mounted: function () {
     this.$nextTick(() => {
+      let app = this;
       this.axios
         .get(
           this.$api_hostname + "api/fetch-payment/" + this.$route.params.id + "/",
@@ -91,6 +92,7 @@ export default {
         })
         .catch(function (error) {
           console.log(error);
+          app.errorMessage = "Something went wrong...";
         });
     });
   },
@@ -111,6 +113,11 @@ export default {
   flex-direction: column;
   padding: 32px;
   width: 33%;
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 80%;
+    padding: 18px;
+  }
 
   img {
     height: 200px;
