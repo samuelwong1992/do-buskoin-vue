@@ -169,6 +169,7 @@ export default {
       border: 2px $primary_light solid;
       font-weight: bold;
       color: $primary;
+      background-color: white;
       cursor: pointer;
 
       &:focus {
