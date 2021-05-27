@@ -14,6 +14,14 @@
           </button>
           <button
             v-if="!uuid"
+            v-on:click="goToTip"
+            class="primary-button"
+            style="width: 100%; margin-bottom: 8px"
+          >
+            Tip!
+          </button>
+          <button
+            v-if="!uuid"
             v-on:click="goToStripe"
             class="primary-button"
             style="width: 100%; margin-bottom: 24px"
@@ -228,6 +236,12 @@ export default {
     imageChanged: function(e) {
       const file = e.target.files[0]
       this.image = file
+    },
+    goToTip: function() {
+      this.$router.push({
+        name: "TipUser",
+        params: { id: this.uuid },
+      });
     },
     goToGenerate: function () {
       this.$router.push({ name: "GenerateQR" });
