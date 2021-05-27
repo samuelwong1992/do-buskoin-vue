@@ -15,7 +15,7 @@
           <input placeholder="enter busker" v-model="searchText" @input="onSearchTextChange" class="search-input" type="text">
         </div>
         <div style="position: absolute; width: 50%; margin: auto;" v-if="searchResults">
-            <div class="search-result" v-for="result in searchResults" :key="result.id">
+            <div class="search-result" v-for="result in searchResults" :key="result.id" v-on:click="profilePressed(result)">
               <div style="display: flex;">
                 <img style="width: 40px; height: 40px; border-radius: 20px; object-fit: contain;" :src="result.logo" alt="">
                 <p style="margin: auto; margin-left: 8px;">{{ result.entertainer_name }}</p>
@@ -53,6 +53,12 @@ export default {
       this.$router.push({
         name: "Tip",
       })
+    },
+    profilePressed: function(profile) {
+      this.$router.push({
+        name: "Profile",
+        params: { id: profile.entertainer_uuid },
+      });
     },
     getRandomBackground: function() {
       return this.backgroundImages[Math.floor(Math.random()*this.backgroundImages.length)]
