@@ -56,8 +56,8 @@ export default {
     },
     profilePressed: function(profile) {
       this.$router.push({
-        name: "TipUser",
-        params: { id: profile.entertainer_uuid },
+        name: "Profile",
+        params: { id: profile.uuid },
       });
     },
     getRandomBackground: function() {
