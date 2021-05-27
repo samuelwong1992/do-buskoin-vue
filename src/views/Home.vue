@@ -41,9 +41,9 @@ export default {
       searchText : "",
       searchResults: [],
       backgroundImages: [
-        "assets/images/background_image_1.jpg",
-        "assets/images/background_image_2.jpg",
-        "assets/images/background_image_3.jpg",
+        "assets/images/bg_image_1.jpg",
+        "assets/images/bg_image_2.jpg",
+        "assets/images/bg_image_3.jpg",
       ],
       backgroundImage: null,
     }
