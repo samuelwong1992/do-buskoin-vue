@@ -13,7 +13,6 @@
             Generate QR Code
           </button>
           <button
-            v-if="!uuid"
             v-on:click="goToTip"
             class="primary-button"
             style="width: 100%; margin-bottom: 8px"
