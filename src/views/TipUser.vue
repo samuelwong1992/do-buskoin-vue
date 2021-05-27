@@ -2,7 +2,7 @@
   <div class="profile">
     <StripeCheckout
       ref="checkoutRef"
-      pk="pk_test_51IXzZ1HfGkYzo1kqXdmETsXtFVJHnBz9Fx4kFxBdm4sW5qVQUJW61fjWs2ppM5w2Ep779xDI5j4EMYimlS7VGvvY00yx2gYEDt"
+      pk="pk_live_51IXzZ1HfGkYzo1kqC0sJba5pZFRAmXBLMWnXT4IuC3RbIivnHwSMWWB5vgx7LhzS9REF3gKt6H8HMnppNNrpqYUb00e4tsZtdK"
       :sessionId="sessionId"
     />
     <div class="profile-container" v-if="!errorMessage && !notFound">
