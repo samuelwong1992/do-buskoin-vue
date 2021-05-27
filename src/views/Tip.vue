@@ -20,13 +20,10 @@ export default {
     QrcodeStream,
   },
   methods: {
-    onClickLabel() {
-      this.$router.push({ name: "TipUser", params: { id: "123" } });
-    },
     onDecode(decodedString) {
-      console.log(decodedString);
-      this.$router.push({ name: "TipUser", params: { id: "123" } });
-      this.qr_code = "abcd";
+      if(decodedString.includes(this.$api_hostname+"tip/")) {
+        this.window.href = decodedString;
+      }
     },
   },
 };
@@ -38,7 +35,8 @@ export default {
 }
 .scanner-container {
   margin: auto;
-  width: 100px;
-  height: 100px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  
 }
 </style>
