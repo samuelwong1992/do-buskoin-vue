@@ -2,15 +2,13 @@
   <div class="home">
     <div class="overlay-content">
       <div class="centered">
-        <div class="title-label">
-          THRIVE IN OUR <br/> CASHLESS SOCIETY
-        </div>
+        <img style="width: 100%;" src="/assets/images/hero_text.png" alt="">
         <div class="tip-label">
           Leave a tip:
         </div>
         <div class="search-field">
           <img class="search-img" src="assets/images/search_icon.png" alt="" srcset="">
-          <input placeholder="enter busker" v-model="searchText" @input="onSearchTextChange" class="search-input" type="text">
+          <input placeholder="busker" v-model="searchText" @input="onSearchTextChange" class="search-input" type="text">
         </div>
         <div style="position: absolute; width: 50%; margin: auto;" v-if="searchResults">
             <div class="search-result" v-for="result in searchResults" :key="result.id" v-on:click="profilePressed(result)">
@@ -118,10 +116,6 @@ export default {
       @media (max-width: $breakpoint-mobile) {
         width: 100%;
       } 
-
-      .title-label {
-        font-size: 52px;
-      }
 
       .tip-label {
         font-size: 28px;
