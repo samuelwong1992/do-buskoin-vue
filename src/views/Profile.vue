@@ -337,14 +337,12 @@ export default {
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 32px;
-    margin-left: 64px;
-    margin-right: 64px;
+    width: 75%;
     background-color: black;
 
     @media (max-width: $breakpoint-mobile) {
       flex-direction: column;
-      margin-left: 0px;
-      margin-right: 0px;
+      width: 100%;
     }
   }
 }
