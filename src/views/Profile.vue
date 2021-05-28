@@ -329,6 +329,15 @@ export default {
 .profile {
   display: flex;
   margin: 0px;
+  margin-left: 64px;
+  margin-right: 64px;
+  background-color: black;
+
+  @media (max-width: $breakpoint-mobile) {
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 
   .profile-container {
     display: flex;

@@ -124,7 +124,7 @@ export default {
 }
 
 .profile-container {
-  background-color: $primary;
+  background-color: $on_bg;
   margin: auto;
   display: flex;
   flex-direction: column;
