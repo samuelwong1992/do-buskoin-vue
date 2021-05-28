@@ -1,7 +1,5 @@
 <template>
   <div class="home">
-    <img class="overlay" :src="backgroundImage" alt="" srcset="">
-    <span class="overlay-color"></span>
     <div class="overlay-content">
       <div class="centered">
         <div class="title-label">
@@ -40,12 +38,6 @@ export default {
     return {
       searchText : "",
       searchResults: [],
-      backgroundImages: [
-        "assets/images/bg_image_1.jpg",
-        "assets/images/bg_image_2.jpg",
-        "assets/images/bg_image_3.jpg",
-      ],
-      backgroundImage: null,
     }
   },
   methods: {
@@ -59,9 +51,6 @@ export default {
         name: "Profile",
         params: { id: profile.uuid },
       });
-    },
-    getRandomBackground: function() {
-      return this.backgroundImages[Math.floor(Math.random()*this.backgroundImages.length)]
     },
     onSearchTextChange: function() {
       if(this.searchText) {
@@ -88,9 +77,6 @@ export default {
         this.searchResults = [];
       }
     }
-  }, 
-  mounted: function() {
-    this.backgroundImage = this.getRandomBackground();
   }
 };
 </script>
@@ -129,6 +115,10 @@ export default {
       margin: auto;
       width: 50%;
 
+      @media (max-width: $breakpoint-mobile) {
+        width: 100%;
+      } 
+
       .title-label {
         font-size: 52px;
       }
@@ -140,7 +130,7 @@ export default {
 
       .search-field {
         .search-img {
-          height: 40px;
+          height: 32px;
           object-fit: contain;
           margin: auto;
         }
@@ -153,10 +143,13 @@ export default {
           width: 40%;
           flex-grow: 1;
           border: none;
-          border-bottom: 2px solid white;
           background-color: transparent;
           margin-left: 8px;
           text-align: center;
+
+           @media (max-width: $breakpoint-mobile) {
+            width: 100%;
+          } 
 
           &::placeholder {
             color: white;
@@ -169,6 +162,11 @@ export default {
         margin: auto;
         margin-top: 40px;
         width: 50%;
+        border-bottom: 2px solid white;
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 80%;
+          } 
       }
 
       .scan-field {
@@ -176,6 +174,7 @@ export default {
 
         width: 25%;
         cursor: pointer;
+        border: none;
 
         .scan-button {
           margin: auto;

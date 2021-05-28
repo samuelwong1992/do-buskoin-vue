@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <div class="login-form">
-      <p class="title">Buskoin</p>
+      <span style="margin-bottom: 16px;" class="small-logo"/>
 
       <p>Email Address</p>
       <input v-model="email" type="text" />
@@ -65,16 +65,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../scss/_variables.scss";
+
 .login {
   display: flex;
 
   .login-form {
     display: flex;
-    border-radius: 4px;
+    border-radius: 8px;
     flex-direction: column;
-    background-color: #1b512d;
+    background-color: $on_bg;
     margin: auto;
-    padding: 16px;
+    padding: 24px;
 
     .title {
       text-align: center;
@@ -104,12 +106,12 @@ export default {
     }
 
     button {
-      height: 28px;
+      height: 32px;
       background-color: white;
       border: none;
       margin-top: 8px;
       border-radius: 14px;
-      color: #1b512d;
+      color: $on_bg;
       cursor: pointer;
     }
   }
