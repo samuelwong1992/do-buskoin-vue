@@ -328,16 +328,8 @@ export default {
 
 .profile {
   display: flex;
+  flex-grow: 1;
   margin: 0px;
-  margin-left: 64px;
-  margin-right: 64px;
-  background-color: black;
-
-  @media (max-width: $breakpoint-mobile) {
-    margin: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
 
   .profile-container {
     display: flex;
@@ -346,9 +338,14 @@ export default {
     margin-bottom: 0px;
     padding: 32px;
     width: 80%;
+    margin-left: 64px;
+    margin-right: 64px;
+    background-color: black;
 
     @media (max-width: $breakpoint-mobile) {
       flex-direction: column;
+      margin-left: 0px;
+      margin-right: 0px;
     }
   }
 }
