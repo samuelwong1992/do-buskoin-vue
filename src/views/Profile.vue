@@ -342,7 +342,7 @@ export default {
 
     @media (max-width: $breakpoint-mobile) {
       flex-direction: column;
-      width: 100%;
+      flex-grow: 1;
     }
   }
 }
