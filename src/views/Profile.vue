@@ -337,7 +337,6 @@ export default {
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 32px;
-    width: 80%;
     margin-left: 64px;
     margin-right: 64px;
     background-color: black;
