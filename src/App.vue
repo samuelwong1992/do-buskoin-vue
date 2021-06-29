@@ -172,4 +172,13 @@ export default {
   background-image: url("/assets/images/buskoin_white_icon.png");
   background-size: contain;
 }
+
+.background-form {
+  background-image: url("/assets/images/text_backer.svg");
+  padding: 80px 120px;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 64px 24px;
+  } 
+}
 </style>

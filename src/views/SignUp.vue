@@ -1,6 +1,6 @@
 <template>
   <div class="sign-up">
-    <div class="sign-up-form">
+    <div class="sign-up-form background-form">
       <span style="margin-bottom: 16px;" class="small-logo"/>
 
       <p>Email Address</p>
@@ -74,9 +74,7 @@ export default {
     display: flex;
     border-radius: 8px;
     flex-direction: column;
-    background-color: $on_bg;
-    margin: auto;
-    padding: 24px;
+    margin: auto;    
 
     .title {
       text-align: center;
